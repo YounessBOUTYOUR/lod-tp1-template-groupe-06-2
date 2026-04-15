@@ -4,15 +4,15 @@
 
 - **Groupe** : 6
 - **Date** : 15/04/2026
-- **Nom du jeu de données** : higher_education_sample
-- **Source / producteur** : Le portail open data national du Maroc. La source est déduite du ``Portal_hint`` : data.gov.ma
-- **URL de la source** : Non spécifiée.
-- **Domaine métier** : l'éducation
+- **Nom du jeu de données** : higher_education_sample.
+- **Source / producteur** : Le portail open data national du Maroc. La source est déduite du ``Portal_hint`` : data.gov.ma.
+- **URL de la source** : Non spécifié.
+- **Domaine métier** : l'éducation.
 
 ## Description générale
 
 - **Objectif du jeu de données** :présenter quelques établissements de l'enseignement supérieur universitaire public.
-- **Format(s) disponible(s)** : csv
+- **Format(s) disponible(s)** : csv.
 - **Langue(s)** : français et anglais. Les noms des établissements sont en français, tandis que les autre colonnes sont en anglais.
 - **Licence** : Non spécifiée.
 - **Fréquence de mise à jour** : Non spécifiée.
@@ -39,7 +39,7 @@
 | Critère | Observation | Score / 5 |
 | --- | --- | --- |
 | Accessibilité | Fichier CSV facilement lisible par une machine | 5 |
-| Réutilisabilité |  |  |
+| Réutilisabilité | Structure tabulaire claire et exploitable immédiatement, mais nécessite un nettoyage préalable (harmonisation des langues, ajout de coordonnées spatiales) pour des usages avancés. | 4 |
 | Documentation | Aucune métadonnée n'est incluse dans le fichier, sauf le READMED.pdf qui introduit un peu le contexte | 2 |
 | Format exploitable | Le format CSV est un standard non propriétaire | 5 |
 | Présence d'une licence | Aucune mention de licence dans les données | 0 |
