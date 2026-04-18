@@ -23,7 +23,7 @@ Les trois types d'entités retenus sont :
 - **L'Établissement** : Entité locale dispensant l'enseignement (ex: Faculté, École d'ingénieurs).
 - **La Ville** : Entité géographique.
 
-Ce choix s'explique par la nature intrinsèquement hiérarchique et spatiale du domaine de l'enseignement supérieur. [cite_start]Pour les apparier, nous disposons des champs textuels en français et en arabe ("المؤسسة" [cite: 1][cite_start], "الجامعة" [cite: 1][cite_start]), des acronymes ("Etablissement (Abr)" [cite: 1][cite_start]), ainsi que du nom de la ville ("Ville" [cite: 1]).
+Ce choix s'explique par la nature intrinsèquement hiérarchique et spatiale du domaine de l'enseignement supérieur. Pour les apparier, nous disposons des champs textuels en français et en arabe ("المؤسسة", "الجامعة"), des acronymes ("Etablissement (Abr)"), ainsi que du nom de la ville ("Ville").
 
 ## 3. Benchmark des référentiels externes
 
@@ -34,19 +34,19 @@ Nous avons évalué trois référentiels majeurs :
 
 ## 4. Cas d'appariement manuel
 
-[cite_start]Le cas le plus significatif est l'appariement de l'établissement local `"Ecole Mohammadia d'Ingénieurs Rabat"`[cite: 3].
+Le cas le plus significatif est l'appariement de l'établissement local `"Ecole Mohammadia d'Ingénieurs Rabat"`.
 - **Référentiel cible** : Wikidata
 - **Indices utilisés** : Nom exact, ville, acronyme (EMI).
 - **Niveau de confiance** : Élevé.
 - **Décision finale** : Alignement avec l'entité Wikidata `Q3578187`.
 
-[cite_start]Une ambiguïté notable a été repérée avec la ville de `"Berkene"`[cite: 39]. Le nom est orthographié avec un 'e' au lieu du classique 'a' ("Berkane"). L'alignement sur l'entité Wikidata `Q793312` (Berkane) nécessite une étape de normalisation préalable.
+Une ambiguïté notable a été repérée avec la ville de `"Berkene"`. Le nom est orthographié avec un 'e' au lieu du classique 'a' ("Berkane"). L'alignement sur l'entité Wikidata `Q793312` (Berkane) nécessite une étape de normalisation préalable.
 
 ## 5. Plan de normalisation et d'identification
 
 Avant toute modélisation RDF (TP2), plusieurs transformations sont impératives :
-1. [cite_start]**Nettoyage textuel** : Retrait des espaces et tirets de décoration (ex: "Université Mohammed V - Rabat -" [cite: 1, 2] doit devenir "Université Mohammed V").
-2. [cite_start]**Normalisation des formats** : Harmonisation des téléphones pour en extraire des valeurs conformes au standard E.164, et remplacement des tirets par des valeurs nulles dans la colonne des effectifs[cite: 5].
+1. **Nettoyage textuel** : Retrait des espaces et tirets de décoration (ex: "Université Mohammed V - Rabat -" doit devenir "Université Mohammed V").
+2. **Normalisation des formats** : Harmonisation des téléphones pour en extraire des valeurs conformes au standard E.164, et remplacement des tirets par des valeurs nulles dans la colonne des effectifs.
 3. **Création d'URIs** :
    - Universités : `http://data.gov.ma/resource/university/{slug}`
    - Établissements : `http://data.gov.ma/resource/establishment/{slug-abbreviation}`
@@ -56,15 +56,15 @@ Ces identifiants locaux stables seront interconnectés via la propriété `owl:s
 ## 6. Analyse des risques
 
 Le risque principal est le **faux appariement** (homonymie), en particulier pour les villes (ex: des villes portant le même nom dans d'autres pays). L'utilisation du contexte ("Maroc") lors de l'appel aux API de réconciliation est vitale.
-[cite_start]Les limites résident dans l'absence de certains petits établissements très récents dans Wikidata (ex: "Ecole Supérieure de l'Education et de la Formation Oujda" [cite: 39] - établissement nouvellement créé). Il manque également dans le jeu source un code UAI ou un identifiant interne propre au MESRSI qui aurait sécurisé l'architecture.
+Les limites résident dans l'absence de certains petits établissements très récents dans Wikidata (ex: "Ecole Supérieure de l'Education et de la Formation Oujda" - établissement nouvellement créé). Il manque également dans le jeu source un code UAI ou un identifiant interne propre au MESRSI qui aurait sécurisé l'architecture.
 
 ## 7. Difficultés rencontrées
 
 L'obstacle majeur est **l'absence totale d'identifiants techniques** dans le fichier source ; tout repose sur des chaînes de caractères.
 De plus, la qualité de certaines valeurs est inégale :
-- [cite_start]Le champ "Téléphone" contient parfois plusieurs numéros séparés par des " / " ("0537 7745 48/49/50" [cite: 6]).
-- [cite_start]Présence d'espaces blancs invisibles à la fin des chaînes ("Al Hoceima " [cite: 42]).
-- [cite_start]Données manquantes sur les effectifs ("-" au lieu de 0 ou vide [cite: 5]).
+- Le champ "Téléphone" contient parfois plusieurs numéros séparés par des " / " ("0537 7745 48/49/50").
+- Présence d'espaces blancs invisibles à la fin des chaînes ("Al Hoceima ").
+- Données manquantes sur les effectifs ("-" au lieu de 0 ou vide).
 
 ## 8. Conclusion
 
