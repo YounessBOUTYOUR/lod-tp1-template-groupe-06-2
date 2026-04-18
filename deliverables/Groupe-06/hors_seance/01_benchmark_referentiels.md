@@ -30,15 +30,15 @@ Documentez au moins `6` cas.
 
 | Entité locale | Type | Référentiel cible | Correspondance candidate | Indices utilisés | Niveau de confiance | Décision |
 | --- | --- | --- | --- | --- | --- | --- |
-| [cite_start]Université Mohammed V - Rabat - [cite: 1] | Université | Wikidata | `Q3109312` (Université Mohammed-V de Rabat) | [cite_start]Nom, Ville ("Rabat" [cite: 1]) | Élevé | Apparié |
-| [cite_start]Ecole Mohammadia d'Ingénieurs Rabat [cite: 3] | Établissement | Wikidata | `Q3578187` (École Mohammadia d'ingénieurs) | [cite_start]Nom, Abréviation ("EMI Rabat" [cite: 3]), Ville | Élevé | Apparié |
-| [cite_start]Casablanca [cite: 7] | Ville | GeoNames | `2553604` (Casablanca) | Nom, Contexte (Maroc) | Élevé | Apparié |
-| [cite_start]Université Hassan II - Casablanca - [cite: 6] | Université | ROR | `https://ror.org/02tr3k616` | [cite_start]Nom de l'université, Ville ("Casablanca" [cite: 7]) | Élevé | Apparié |
-| [cite_start]Berkene [cite: 39] | Ville | Wikidata | `Q793312` (Berkane) | Nom (Recherche floue : Berkene / Berkane) | Moyen | Apparié (Nécessite une normalisation orthographique) |
-| [cite_start]Faculté des Sciences Semlalia Marrakech [cite: 21] | Établissement | Wikidata | `Q3064506` (Faculté des sciences Semlalia) | [cite_start]Nom, Ville ("Marrakech" [cite: 21]) | Élevé | Apparié |
+| Université Mohammed V - Rabat  | Université | Wikidata | `Q3109312` (Université Mohammed-V de Rabat) | Nom, Ville ("Rabat") | Élevé | Apparié |
+| Ecole Mohammadia d'Ingénieurs Rabat  | Établissement | Wikidata | `Q3578187` (École Mohammadia d'ingénieurs) | Nom, Abréviation ("EMI Rabat"), Ville | Élevé | Apparié |
+| Casablanca  | Ville | GeoNames | `2553604` (Casablanca) | Nom, Contexte (Maroc) | Élevé | Apparié |
+| Université Hassan II - Casablanca  | Université | ROR | `https://ror.org/02tr3k616` | Nom de l'université, Ville ("Casablanca") | Élevé | Apparié |
+| Berkene  | Ville | Wikidata | `Q793312` (Berkane) | Nom (Recherche floue : Berkene / Berkane) | Moyen | Apparié (Nécessite une normalisation orthographique) |
+| Faculté des Sciences Semlalia Marrakech  | Établissement | Wikidata | `Q3064506` (Faculté des sciences Semlalia) | Nom, Ville ("Marrakech") | Élevé | Apparié |
 
 ## 4. Synthèse
 
 - **Quel référentiel paraît le plus utile pour chaque type d'entité ?** Wikidata est le plus polyvalent et couvre particulièrement bien les "Établissements" et les "Universités". GeoNames est le standard incontournable pour les "Villes". ROR est excellent pour identifier de manière univoque l'entité mère ("Université").
-- [cite_start]**Quels cas restent ambigus ?** Les entités géographiques avec des variations orthographiques dans le jeu de données (ex: "Berkene" [cite: 39] [cite_start]au lieu de Berkane, ou l'espace dans "Al Hoceima " [cite: 42]). De plus, certaines écoles très récentes ou petites facultés polydisciplinaires n'existent pas dans Wikidata.
-- [cite_start]**Quels champs du dataset aident le plus à l'appariement ?** La combinaison des champs `Etablissement (Abr)` [cite: 1] [cite_start](ex: "FSJES Agdal Rabat" [cite: 1]) et `Ville` [cite: 1] est déterminante pour éviter les faux positifs entre établissements de même type situés dans des villes différentes. [cite_start]Le champ en arabe `المؤسسة` [cite: 1] est également un excellent indice pour confirmer l'appariement sur Wikidata via les libellés multilingues.
+- **Quels cas restent ambigus ?** Les entités géographiques avec des variations orthographiques dans le jeu de données (ex: "Berkene" au lieu de Berkane, ou l'espace dans "Al Hoceima "). De plus, certaines écoles très récentes ou petites facultés polydisciplinaires n'existent pas dans Wikidata.
+- **Quels champs du dataset aident le plus à l'appariement ?** La combinaison des champs `Etablissement (Abr)`(ex: "FSJES Agdal Rabat") et `Ville` est déterminante pour éviter les faux positifs entre établissements de même type situés dans des villes différentes. Le champ en arabe `المؤسسة` est également un excellent indice pour confirmer l'appariement sur Wikidata via les libellés multilingues.
