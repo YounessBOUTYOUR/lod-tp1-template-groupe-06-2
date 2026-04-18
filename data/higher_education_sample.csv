@@ -20,4 +20,3 @@ record_id,institution_name,short_name,city,country,website,institution_type,main
 19,Institut National de Statistique et d'Economie Appliquee,INSEA,Rabat,Morocco,https://www.insea.ac.ma,public school,data science,1961,data.gov.ma
 20,Institut Agronomique et Veterinaire Hassan II,IAV Hassan II,Rabat,Morocco,https://www.iav.ac.ma,public institute,agronomy,1966,data.gov.ma
 21,Ecole Nationale de l'Industrie Minerale,ENIM,Rabat,Morocco,https://www.enim.ac.ma,engineering school,mining engineering,1972,data.gov.ma
- 
