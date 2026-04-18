@@ -84,7 +84,7 @@
 
 - **Forces observées** : La structure est constante, il n'y a aucune valeur nulle ou manquante dans cet échantillon, et les types de données sont respectés.
 - **Faiblesses observées** : La langue est inconsistante (noms en français, catégories en anglais) , et l'absence totale de documentation/métadonnées diminue le contexte.
-- **Ambiguïtés ou doublons potentiels** :
+- **Ambiguïtés ou doublons potentiels** : Ambiguïté des types d'établissements : La colonne institution_type n'est pas standardisée. Les valeurs comme "public school", "engineering school" et "faculty" se chevauchent sémantiquement.
 - **Champs manquants pour une meilleure interconnexion** : Coordonnées géographiques, codes internationaux pour les pays/villes.
 - **Risque principal pour une future mise en relation** : L'incapacité à faire la distinction entre l'établissement physique et l'entité administrative sans modélisation ontologique plus poussée.
 
